@@ -18,6 +18,7 @@ i=GPIO.input(11)
 if i==1:
 	camera.start_recording('/home/pi/video.h264')
 while i==1:
+	print('Recording')
 	i=GPIO.input(11)
 	GPIO.output(3, 1)
 if i==0:
