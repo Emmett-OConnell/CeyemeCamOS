@@ -34,5 +34,5 @@ if i==0:
 	os.system('rm video1.h264')
 	os.system('ffmpeg -i video.h264 -vcodec copy '+vid+'.mp4')
 	os.system('rm video.h264')
-	#os.system('scp cam1vid'+vid+'.mp4 pi@Ceyemore.local:/home/pi/Videos/Newvids')
+	os.system('scp cam1vid'+vid+'.mp4 pi@Ceyemore.local:/home/pi/Videos/Newvids')
 	os.system('mv '+vid+'.mp4 v_storage')
