@@ -26,7 +26,7 @@ while i==1:
 if i==0:
 	camera.stop_recording()
 	now = datetime.now()
-	dt_string = now.strftime("%d_%m_%Y_%H_%M_%S")
+	dt_string = now.strftime("%Y_%m_%d_%H_%M_%S")
 	vid = dt_string+cam
 	os.system('ffmpeg -i video.h264 -vf vflip -c:a copy video1.h264')
         os.system('rm video.h264')
@@ -34,5 +34,5 @@ if i==0:
 	os.system('rm video1.h264')
 	os.system('ffmpeg -i video.h264 -vcodec copy '+vid+'.mp4')
 	os.system('rm video.h264')
-	os.system('scp cam1vid'+vid+'.mp4 pi@Ceyemore.local:/home/pi/Videos/Newvids')
+	os.system('scp '+vid+'.mp4 pi@Ceyemore.local:/home/pi/Videos/Newvids')
 	os.system('mv '+vid+'.mp4 v_storage')
